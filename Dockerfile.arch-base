@@ -5,7 +5,7 @@ LABEL maintainer="phantomic@protonmail.com"
 RUN pacman -Syu --needed --noconfirm sudo namcap fakeroot audit grep diffutils findutils 
 
 # dependencies for yay
-RUN pacman -S --noconfirm git less ncurses passwd pinentry procps-ng shadow-utils util-linux wget fish bc curl base-devel
+RUN pacman -S --noconfirm git less ncurses pinentry procps-ng util-linux wget fish bc curl base-devel shadow
 
 # configure default gpg key server to a more reliable one
 COPY gpg.conf /home/build/.gnupg/gpg.conf
