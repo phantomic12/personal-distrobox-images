@@ -8,5 +8,5 @@ RUN pacman -Syu --needed --noconfirm sudo namcap fakeroot audit grep diffutils f
 
 # dependencies for yay
 RUN pacman -S --noconfirm git less ncurses pinentry procps-ng util-linux wget fish bc curl base-devel shadow
-RUN pacman -Sy --needed --noconfirm mesa opengl-driver vulkan-iintel vulkan-radeon
+RUN pacman -Sy --needed --noconfirm mesa opengl-driver vulkan-intel vulkan-radeon bash
 
