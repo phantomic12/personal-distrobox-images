@@ -2,12 +2,10 @@ FROM library/archlinux
 
 LABEL maintainer="phantomic@protonmail.com"
 
+COPY pacman.conf /etc/pacman.conf
+
 RUN pacman -Syu --needed --noconfirm sudo namcap fakeroot audit grep diffutils findutils 
 
 # dependencies for yay
 RUN pacman -S --noconfirm git less ncurses pinentry procps-ng util-linux wget fish bc curl base-devel shadow
 
-
-# install yay which can be used to install AUR dependencies
-RUN git clone https://aur.archlinux.org/yay.git
-RUN cd yay && makepkg --syncdeps --install --noconfirm
