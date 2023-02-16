@@ -4,4 +4,4 @@ LABEL maintainer="phantomic@protonmail.com"
 
 COPY pacman.conf /etc/pacman.conf
 
-RUN pacman -Syu --needed --noconfirm fish bc curl diffutils findutils less ncurses passwd pinentry procps-ng shadow-utils sudo util-linux vte-profile wget 
+RUN pacman -Syu --needed --noconfirm fish bc curl diffutils findutils less ncurses passwd pinentry procps-ng shadow-utils sudo util-linux wget 
